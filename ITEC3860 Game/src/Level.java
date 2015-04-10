@@ -1,40 +1,46 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Level {
 
 	private ArrayList<Room> rooms;
-	private ArrayList<Puzzle> puzzles;
-	private ArrayList<Enemy> enemies;
-	private ArrayList<Item> items;
 	private Store store;
 	
-	public Level(ArrayList<Room> r, ArrayList<Puzzle> p, ArrayList<Enemy> e, ArrayList<Item> i, Store s)
+	/**
+	 * creates a level with a list of rooms and a store, which comprise it
+	 * @param setOfRooms
+	 * @param aStore
+	 */
+	public Level(ArrayList<Room> setOfRooms, Store aStore)
 	{
-		this.rooms = r;
-		this.puzzles = p;
-		this.enemies = e;
-		this.items = i;
-		this.store = s;
+		this.rooms = setOfRooms;
+		this.store = aStore;
 	}
 	
+	/**
+	 * randomizes the structure of the level by shuffling the rooms
+	 */
+	public void randomize()
+	{
+		Collections.shuffle(rooms);
+	}
+	
+	/**
+	 * getter method for rooms
+	 * @return rooms
+	 */
 	public ArrayList<Room> getRooms()
 	{
 		return rooms;
 	}
-
-	public ArrayList<Puzzle> getPuzzles() 
+	
+	/**
+	 * getter method for store
+	 * @return store
+	 */
+	public Store getStore()
 	{
-		return puzzles;
-	}
-
-	public ArrayList<Enemy> getEnemies() 
-	{
-		return enemies;
-	}
-
-	public ArrayList<Item> getItems() 
-	{
-		return items;
+		return store;
 	}
 }
