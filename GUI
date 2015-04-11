@@ -1,0 +1,83 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.TextField;
+import java.awt.Canvas;
+import javax.swing.JPopupMenu;
+
+//LaDonte Groce
+public class GameGUI {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GameGUI window = new GameGUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GameGUI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.YELLOW);
+		frame.setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		//Help menu
+		JButton btnNewButton = new JButton("Help");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.print("directions for game"); ; 
+			}
+		});
+		frame.getContentPane().add(btnNewButton, BorderLayout.NORTH);
+		
+		JPopupMenu popupMenu = new JPopupMenu();
+		popupMenu.setLabel("Help Menu");
+		popupMenu.setToolTipText("Directions for help");
+		frame.getContentPane().add(popupMenu, BorderLayout.WEST);
+		
+		
+		//allows user to enter commands
+		TextField textField = new TextField();
+		frame.getContentPane().add(textField, BorderLayout.SOUTH);
+		
+		
+		//used to display the code give by other teammates
+		Canvas canvas = new Canvas();
+		frame.getContentPane().add(canvas, BorderLayout.CENTER);
+	}
+}
+		
+	
+
+	
