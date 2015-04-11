@@ -1,8 +1,13 @@
+import java.util.Random;
+
 /**
  * Class: Item
- * @author: Cory morgan
+ * @author: Cory Morgan
  * @version 1.0 
  * Course: ITEC 
+ * 
+ * Item class to create all of the items the games involves including
+ * weapons and potions
  */
 
 
@@ -12,18 +17,18 @@ public class Item {
 	
 	
 	private String name;
-	private int value;
-	private boolean weapon;
+	int value;
+	boolean weapon;
+	private Random r = new Random();
 
 	/** Method Item
 	 * Constructor
 	 * 
 	 * @param name - String representing the item name
 	 */
-	public Item(String name) {
+	public Item(String name, int value) {
 		this.name = name;
-		weapon = false;
-		this.value = value;
+		this.value = r.nextInt(20);
 	}
 
 	/** Method getName
@@ -43,7 +48,7 @@ public class Item {
 	 * @return void
 	 */
 	public void setWeapon() {
-		weapon = true;
+		 weapon = true;
 	}
 
 	/** Method isWeapon
@@ -52,18 +57,17 @@ public class Item {
 	 * @param none
 	 * @return boolean - true if it is a weapon, false if not
 	 */
-	public boolean isWeapon() {
-		return weapon;
-	}
 	
 	public int getValue() {
 		
-		return value;
+		//random value just to keep the game changing
+		return r.nextInt(20);
 	}
 	
 	public String toString()
 	{
-		return name + " " + weapon;
+		 return "Item name is: " + name;
+				
 	}
 
 	@Override
