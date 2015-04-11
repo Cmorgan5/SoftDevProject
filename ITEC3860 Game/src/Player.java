@@ -11,7 +11,7 @@
  * Portions of this code were taken from the sample code for the in-class multithreading assignment
  */ 
 
-public class Player extends Entity {
+public class Player extends Character {
 
 	private int money;
 	
