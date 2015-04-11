@@ -1,5 +1,5 @@
 /**Class: Player
- * @author Cory Morgan
+ * @author Cory Morgan, Jacob Fagan
  * @version 1.0
  * Course : ITEC 3150
  * Written: April 3, 2015
@@ -15,30 +15,51 @@ public class Player extends Entity {
 
 	private int money;
 	
-	public Player(String name, int money) {
+	/**
+	 * creates a player with a name and sets their money to $500
+	 * @param name
+	 * @param money
+	 */
+	public Player(String name) {
 		super(name);
+		this.money = 500;
 	}
 
+	/**
+	 * getter method for money
+	 * @return money
+	 */
 	public int getMoney() {
 		return money;
 	}
 	
+	/**
+	 * adds an item to the players inventory
+	 */
 	@Override
 	public void addItem(Item item) {
 		super.addItem(item);
 	}
 
+	/**
+	 * removes an item from the player's inventory
+	 */
 	@Override
 	public void removeItem(Item item) {
 		super.removeItem(item);
 	}
 
+	/**
+	 * applies damage to the player
+	 */
 	@Override
 	public void takeDamage(int hit) {
 		super.takeDamage(hit);
 	}
 
-
+	/**
+	 * returns a gretting from the player.
+	 */
 	@Override
 	public String getGreeting() 
 	{
