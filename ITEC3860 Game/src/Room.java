@@ -1,3 +1,17 @@
+/**Class: Room
+ * @author Jacob Fagan
+ * @version 1.0
+ * Course : ITEC 3150
+ * Written: April 3, 2015
+ *
+ *
+ * This class – A room within the level with a description, and potentially a puzzle, enemy, and/or item.
+ * A room must have a description, but it might not have an enemy, puzzle, or item. If a room has a puzzle 
+ * or enemy in it, it cannot be passed if the puzzle within it has not been solved or the enemy within it
+ * has not been defeated. If the puzzle is solved or the enemy beaten, the room can then be passed.
+ *
+ * Purpose: – Create and define a room.
+ */ 
 
 public class Room {
 
@@ -134,7 +148,7 @@ public class Room {
 	 */
 	public void setPassable()
 	{
-		if (puzzle.isSolved() == true)
+		if (puzzle.isSolved() == true || enemy.getHealthPoints() == 0)
 		{
 			passable = true;
 		}

@@ -1,5 +1,5 @@
 /**
- * Class: Entity(Character
+ * Class: Entity(Character)
  * @author:Cory Morgan
  * @version 1.0 
  * Course: ITEC

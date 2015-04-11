@@ -1,3 +1,17 @@
+/**Class: Level
+ * @author Jacob Fagan
+ * @version 1.0
+ * Course : ITEC 3150
+ * Written: April 3, 2015
+ *
+ *
+ * This class – Creates a level that is made up of rooms and a store. The rooms are predefined, but their
+ * placement on the map will be randomized. The level also contains a store where the player can buy and
+ * sell items. 
+ *
+ * Purpose: – Create and define a level with rooms and a store;
+ */ 
+
 import java.util.ArrayList;
 import java.util.Collections;
 

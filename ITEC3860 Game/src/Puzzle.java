@@ -1,3 +1,15 @@
+/**Class: Puzzle
+ * @author Jacob Fagan
+ * @version 1.0
+ * Course : ITEC 3150
+ * Written: April 3, 2015
+ *
+ *
+ * This class – A puzzle with a description and a solution. The puzzle will remain unsolved and impede
+ * progress from the room is lies within until the solution is inputted by the player.
+ *
+ * Purpose: – Create and define a puzzle.
+ */ 
 
 public class Puzzle {
 
