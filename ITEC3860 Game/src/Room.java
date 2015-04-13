@@ -148,7 +148,7 @@ public class Room {
 	 */
 	public void setPassable()
 	{
-		if (puzzle.isSolved() == true || enemy.getHealthPoints() == 0)
+		if (puzzle.isSolved() == true || enemy.getHealth() == 0)
 		{
 			passable = true;
 		}

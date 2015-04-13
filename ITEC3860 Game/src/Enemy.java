@@ -11,7 +11,7 @@
  * Purpose: – Create and define an enemy with a name, health, a difficulty level, and a type.
  */ 
 
-public class Enemy extends Entity {
+public class Enemy extends Character {
 
 	private int difficulty;
 	private String type;
@@ -57,6 +57,6 @@ public class Enemy extends Entity {
 
 	public String getGreeting()
 	{
-		return name + "stands in the room.";
+		return name + " stands in the room.";
 	}
 }

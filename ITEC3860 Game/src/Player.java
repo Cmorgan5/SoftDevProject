@@ -60,7 +60,6 @@ public class Player extends Character {
 	/**
 	 * returns a gretting from the player.
 	 */
-	@Override
 	public String getGreeting() 
 	{
 		System.out.println("Hello World");

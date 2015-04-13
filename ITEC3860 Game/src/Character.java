@@ -16,7 +16,7 @@ public abstract class Character {
 	protected static String name;
 	private int healthPoints;
 	private Weapon currentweapon;
-	private Armor currentarmor;
+	//private Armor currentarmor;
 	ArrayList<Item> inventory;
 	private String location;
 	private int money;
