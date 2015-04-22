@@ -14,6 +14,7 @@
 public class Player extends Character {
 
 	private int money;
+	private Room location;
 	
 	/**
 	 * creates a player with a name and sets their money to $500
@@ -57,6 +58,14 @@ public class Player extends Character {
 		super.takeDamage(hit);
 	}
 
+	public void setLocation(Room aRoom) {
+		this.location = aRoom;
+	}
+	
+	public Room getLocation() {
+		return location;
+	}
+	
 	/**
 	 * returns a gretting from the player.
 	 */
