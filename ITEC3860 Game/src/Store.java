@@ -1,4 +1,4 @@
-/**Class: Enemy
+/**Class: Store
  * @author Jacob Fagan
  * @version 1.0
  * Course : ITEC 3150
@@ -15,8 +15,10 @@
 import java.util.ArrayList;
 
 
-public class Store {
+public class Store
+{
 
+	private String description;
 	private ArrayList<Item> stock;
 	private int budget;
 
@@ -25,8 +27,9 @@ public class Store {
 	 * @param aStock
 	 * @param aBudget
 	 */
-	public Store(ArrayList<Item> aStock, int aBudget)
+	public Store(String aDescription, ArrayList<Item> aStock, int aBudget)
 	{
+		this.description = aDescription;
 		this.stock = aStock;
 		this.budget = aBudget;
 	}
@@ -49,6 +52,11 @@ public class Store {
 		return budget;
 	}
 
+	public String getDescription()
+	{
+		return description;
+	}
+	
 	/**
 	 * sells a specified item to a specified player. Removes sold item from stock, adds item's value to budget,
 	 * adds item to the player's inventory, and removes item's value from the player's money. If the player does not
