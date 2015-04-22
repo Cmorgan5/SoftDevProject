@@ -13,14 +13,16 @@
  * Purpose: – Create and define a room.
  */ 
 
-public class Room {
+public class Room
+{
 
 	private String description;
 	private Puzzle puzzle;
 	private Enemy enemy;
 	private boolean passable;
 	private Item item;
-	
+	private int placementID;
+
 	/**
 	 * creates a room with a description, enemy, puzzle, and item. Enemy, puzzle, and item
 	 * may be null, meaning that there is no enemy/puzzle/item in the room
@@ -43,8 +45,9 @@ public class Room {
 		{
 			passable = true;
 		}
+		this.placementID = 0;
 	}
-	
+
 	/**
 	 * getter method for the description of the room. The description also includes the
 	 * enemy, puzzle, and item descriptions, if applicable.
@@ -54,7 +57,7 @@ public class Room {
 	{
 		return description;
 	}
-	
+
 	/**
 	 * getter method for the enemy in the room. If enemy is null, there is no enemy in the room.
 	 * @return enemy
@@ -63,7 +66,7 @@ public class Room {
 	{
 		return enemy;
 	}
-	
+
 	/**
 	 * checks whether or not the room has an enemy in it. If false is returned, there is no
 	 * enemy in the room
@@ -80,7 +83,7 @@ public class Room {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * getter method for the puzzle in the room. If item is null, there is no puzzle in the room.
 	 * @return puzzle
@@ -89,7 +92,7 @@ public class Room {
 	{
 		return puzzle;
 	}
-	
+
 	/**
 	 * checks whether or not the room has a puzzle in it. If false is returned, there is no
 	 * puzzle in the room
@@ -106,7 +109,7 @@ public class Room {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * getter method for the item in the room. If item is null, there is no item in the room.
 	 * @return item
@@ -115,7 +118,7 @@ public class Room {
 	{
 		return item;
 	}
-	
+
 	/**
 	 * checks whether or not the room has an item in it. If false is returned, there is no
 	 * item in the room
@@ -132,7 +135,7 @@ public class Room {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * checks whether or not the room is passable
 	 * @return passable
@@ -141,7 +144,7 @@ public class Room {
 	{
 		return passable;
 	}
-	
+
 	/**
 	 * sets the room to be passable or not passable. If a puzzle or enemy is in
 	 * the room, the room is not passable. Otherwise, it is passable
@@ -156,5 +159,15 @@ public class Room {
 		{
 			passable = false;
 		}
+	}
+
+	public int getPlacementID() 
+	{
+		return placementID;
+	}
+
+	public void setPlacementID(int placementID) 
+	{
+		this.placementID = placementID;
 	}
 }
