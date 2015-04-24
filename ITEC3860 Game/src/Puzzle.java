@@ -11,12 +11,13 @@
  * Purpose: – Create and define a puzzle.
  */ 
 
-public class Puzzle {
+public class Puzzle 
+{
 
 	private String description;
 	private String solution;
 	private boolean solved;
-	
+
 	/**
 	 * creates a puzzle with a description that describes the puzzle, and a solution that will
 	 * solve the puzzle when inputted by the player. Also sets the puzzle to an unsolved state
@@ -30,7 +31,7 @@ public class Puzzle {
 		this.solution = aSolution;
 		solved = false;
 	}
-	
+
 	/**
 	 * getter method for description
 	 * @return description
@@ -39,7 +40,7 @@ public class Puzzle {
 	{
 		return description;
 	}
-	
+
 	/**
 	 * getter method for the solution
 	 * @return solution
@@ -48,7 +49,7 @@ public class Puzzle {
 	{
 		return solution;
 	}
-	
+
 	/**
 	 * checks whether or not the puzzle has been solved. If false is returned, the 
 	 * puzzle has not been solved. If true is returned, the puzzle has been solved
@@ -58,7 +59,7 @@ public class Puzzle {
 	{
 		return solved;
 	}
-	
+
 	/**
 	 * sets the puzzle to a solved state.
 	 */

@@ -52,6 +52,10 @@ public class Store
 		return budget;
 	}
 
+	/**
+	 * getter for the store's description
+	 * @return description
+	 */
 	public String getDescription()
 	{
 		return description;

@@ -20,6 +20,7 @@ public class Level {
 
 	private ArrayList<Room> rooms;
 	private Store store;
+	private Player player;
 	
 	/**
 	 * creates a level with a list of rooms and a store, which comprise it
@@ -30,6 +31,10 @@ public class Level {
 	{
 		this.rooms = setOfRooms;
 		this.store = aStore;
+		for (int i = 0; i < rooms.size(); i++)
+		{
+			rooms.get(i).setPlacementID(i);
+		}
 	}
 	
 	/**
@@ -38,6 +43,10 @@ public class Level {
 	public void randomize()
 	{
 		Collections.shuffle(rooms);
+		for (int i = 0; i < rooms.size(); i++)
+		{
+			rooms.get(i).setPlacementID(i);
+		}
 	}
 	
 	/**
@@ -56,5 +65,17 @@ public class Level {
 	public Store getStore()
 	{
 		return store;
+	}
+	
+	public boolean isComplete()
+	{
+		if (rooms.get(rooms.size()-1).isPassable() != true)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
 	}
 }
