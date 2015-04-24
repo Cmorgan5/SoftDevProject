@@ -13,11 +13,11 @@ import java.util.Random;
 public abstract class Character {
 	
 	//Character with different attributes: health, inventory, money, etc
-	protected static String name;
+	protected String name;
 	private int healthPoints;
-	private Weapon currentweapon;
+	private Item currentweapon;
 	//private Armor currentarmor;
-	ArrayList<Item> inventory;
+	private ArrayList<Item> inventory;
 	private String location;
 	private int money;
 	private Random r = new Random();
@@ -31,10 +31,10 @@ public abstract class Character {
 	 * 
 	 * @param name - String representing the entity name
 	 */
-	public Character(String name) {
-		this.name = name;
-		inventory = new ArrayList<Item>();
-		healthPoints = MAX_HEALTH;
+	public Character() {
+//this.name = name;
+//		inventory = new ArrayList<Item>();
+//		healthPoints = MAX_HEALTH;
 	}
 
 	/** Method getName
@@ -53,8 +53,8 @@ public abstract class Character {
 	 * @param none
 	 * @return int - the health points of the entity
 	 */
-	public int getHealth() {
-		return healthPoints;
+	public int getHealth(int healthpoints) {
+		return healthpoints;
 	}
 
 	/** Method addItem
@@ -85,8 +85,12 @@ public abstract class Character {
 	 */
 	public boolean isItemAvailable(Item item) {
 		if (inventory.contains(item)) {
+			
+			System.out.println("Item is avaiable for use.");
 			return true;
 		} else {
+			
+			System.out.println("Not avaiable");
 			return false;
 		}
 	}
@@ -98,6 +102,8 @@ public abstract class Character {
 	 * @return void
 	 */
 	public void takeDamage(int hit) {
+		
+		
 		healthPoints -= hit;
 	}
 	
@@ -142,6 +148,14 @@ public abstract class Character {
 	public void dropItem(Item item) {
 		
 		inventory.remove(item);
+	}
+	
+	public String getLocation(String location)
+	{
+		
+		return location;
+		
+		
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class Player extends Character {
 	 * @param money
 	 */
 	public Player(String name) {
-		super(name);
+		super();
 		this.money = 500;
 	}
 

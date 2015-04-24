@@ -28,7 +28,7 @@ public class Item {
 	 */
 	public Item(String name, int value) {
 		this.name = name;
-		this.value = r.nextInt(20);
+		
 	}
 
 	/** Method getName
@@ -61,7 +61,7 @@ public class Item {
 	public int getValue() {
 		
 		//random value just to keep the game changing
-		return r.nextInt(20);
+		return value;
 	}
 	
 	public String toString()
