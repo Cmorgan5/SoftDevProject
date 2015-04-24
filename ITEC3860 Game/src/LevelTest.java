@@ -33,7 +33,7 @@ public class LevelTest {
 		itemList.add(i1);
 		itemList.add(i2);
 		itemList.add(i3);
-		l = new Level(roomList, new Store(itemList, 5000));
+		l = new Level(roomList, new Store("Store 1", itemList, 5000));
 	}
 
 	/**

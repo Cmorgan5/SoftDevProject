@@ -20,7 +20,7 @@ public class StoreTest {
 		listOfItems.add(new Item("Item 1", 100));
 		listOfItems.add(new Item("Item 2", 10));
 		listOfItems.add(new Item("Item 3", 1000));
-		s = new Store(listOfItems, 5000);
+		s = new Store("Store 1", listOfItems, 5000);
 	}
 	
 	/**
