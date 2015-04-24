@@ -25,7 +25,7 @@ public class Enemy extends Character
 	 */
 	public Enemy(String aName, int aDifficulty, String aType)
 	{
-		super(aName);
+		super();
 		this.difficulty = aDifficulty;
 		this.type = aType;
 	}
