@@ -14,7 +14,11 @@ public class Navigator {
 	{
 		if (direction.equalsIgnoreCase("forward"))
 		{
-			if ((player.getLocation().getPlacementID() + 1) >= level.getRooms().size())
+			if (player.getLocation().isPassable() == false)
+			{
+				return "Cannot proceed.";
+			}
+			else if ((player.getLocation().getPlacementID() + 1) >= level.getRooms().size())
 			{
 				if (level.isComplete() != true)
 				{
