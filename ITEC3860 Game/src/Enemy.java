@@ -14,46 +14,15 @@
 public class Enemy extends Character 
 {
 
-	private int difficulty;
-	private String type;
-
 	/**
 	 * creates an enemy with a name, difficulty level, and type.
 	 * @param aName
 	 * @param aDifficulty
 	 * @param aType
 	 */
-	public Enemy(String aName, int aDifficulty, String aType)
+	public Enemy(String aName)
 	{
 		super();
-		this.difficulty = aDifficulty;
-		this.type = aType;
-	}
-
-	/**
-	 * getter for the difficulty level of the enemy
-	 * @return difficulty
-	 */
-	public int getDifficulty() 
-	{
-		return difficulty;
-	}
-
-	/**
-	 * setter for the difficulty level of the enemy
-	 */
-	public void setDifficulty(int difficulty) 
-	{
-		this.difficulty = difficulty;
-	}
-
-	/**
-	 * getter for the type of the enemy
-	 * @return type
-	 */
-	public String getType() 
-	{
-		return type;
 	}
 
 	public String getGreeting()
