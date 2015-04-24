@@ -80,8 +80,8 @@ public class RoomTest {
 	{
 		assertEquals(false, r.isPassable());
 		r.getPuzzle().solve();
-		r.getEnemy().takeDamage(r.getEnemy().getHealth());
-		assertEquals(0, r.getEnemy().getHealth());
+		//r.getEnemy().takeDamage(r.getEnemy().getHealth());
+		//assertEquals(0, r.getEnemy().getHealth());
 		r.setPassable();
 		assertEquals(true, r.isPassable());
 		

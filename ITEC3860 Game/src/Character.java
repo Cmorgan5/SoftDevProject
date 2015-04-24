@@ -154,8 +154,6 @@ public abstract class Character {
 	{
 		
 		return location;
-		
-		
 	}
 
 	@Override
