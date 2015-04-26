@@ -19,12 +19,10 @@ public class Game {
 //Would these type of entities work? or 
 //do I need to actually make a Weapon and Armor entity 
 //separately
-Item gun = new Item("Gun", 20);
-Item knife = new Item("Knife", 20);
-Item bomb = new Item("Bomb", 20);
-Item vest = new Item("Armor", 35);
-Item shield = new Item("Shield", 50);
-Item helmet = new Item("Helmet", 10);
+//Item bandaid = new Item("Bandaid", 5);
+//Item healthkit = new Item("Health Kit", 20);
+//Item apple = new Item("Golden Apple", 50);
+
 
 
 	public Game(Level aLevel, Player aPlayer)

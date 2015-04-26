@@ -15,13 +15,7 @@ public abstract class Character {
 	//Character with different attributes: health, inventory, money, etc
 	protected String name;
 	private int healthPoints;
-	private Item currentweapon;
 	private int currentHealth;
-	private Item Weapon;
-	private Item Armor;
-	private int attackPower;
-	private int defensePower;
-	//private Armor currentarmor;
 	private ArrayList<Item> inventory;
 	private String location;
 	private int money;
@@ -140,31 +134,7 @@ public abstract class Character {
 	public void takeHealing(int heal) {
 		healthPoints += heal;
 	}
-	
-	
-	public Item getArmor() {
-		return Armor;
-	}
 
-	public void setArmor(Item armor) {
-		Armor = armor;
-	}
-
-	public int getAttackPower() {
-		return attackPower;
-	}
-
-	public void setAttackPower(int attackPower) {
-		this.attackPower = attackPower;
-	}
-
-	public int getDefensePower() {
-		return defensePower;
-	}
-
-	public void setDefensePower(int defensePower) {
-		this.defensePower = defensePower;
-	}
 
 	public ArrayList<Item> getInventory() {
 		return inventory;
