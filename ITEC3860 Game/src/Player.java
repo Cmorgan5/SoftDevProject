@@ -22,7 +22,7 @@ public class Player extends Character {
 	 * @param money
 	 */
 	public Player(String name) {
-		super();
+		super(name);
 		this.money = 500;
 	}
 

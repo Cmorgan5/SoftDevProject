@@ -14,7 +14,7 @@ public class RoomTest {
 	@Before
 	public void setUp() throws Exception 
 	{
-		r = new Room("Room 1.", new Enemy("Enemy 1.", 3, "Gun"), new Puzzle("Puzzle 1.", "Solution"),
+		r = new Room("Room 1.", new Enemy("Enemy 1."), new Puzzle("Puzzle 1.", "Solution"),
 				new Item("Item 1", 100));
 	}
 
@@ -25,10 +25,8 @@ public class RoomTest {
 	public void testRoom()
 	{
 		assertEquals("Room 1. Puzzle 1. There is a Item 1 on the floor.", r.getDescription());
-		Enemy e = new Enemy("Enemy 1.", 3, "Gun");
+		Enemy e = new Enemy("Enemy 1.");
 		assertEquals(e.getName(), r.getEnemy().getName());
-		assertEquals(e.getDifficulty(), r.getEnemy().getDifficulty());
-		assertEquals(e.getType(), r.getEnemy().getType());
 		Puzzle p = new Puzzle("Puzzle 1.", "Solution");
 		assertEquals(p.getDescription(), r.getPuzzle().getDescription());
 		assertEquals(p.getSolution(), r.getPuzzle().getSolution());
@@ -55,7 +53,7 @@ public class RoomTest {
 	public void testHasPuzzle()
 	{
 		assertEquals(true, r.hasPuzzle());
-		Room r2 = new Room("Room 1.", new Enemy("Enemy 1.", 3, "Gun"), null,
+		Room r2 = new Room("Room 1.", new Enemy("Enemy 1."), null,
 				new Item("Item 1", 100));
 		assertEquals(false, r2.hasPuzzle());
 	}
@@ -67,7 +65,7 @@ public class RoomTest {
 	public void testHasItem()
 	{
 		assertEquals(true, r.hasItem());
-		Room r2 = new Room("Room 1.", new Enemy("Enemy 1.", 3, "Gun"), new Puzzle("Puzzle 1.", "Solution"),
+		Room r2 = new Room("Room 1.", new Enemy("Enemy 1."), new Puzzle("Puzzle 1.", "Solution"),
 				null);
 		assertEquals(false, r2.hasItem());
 	}

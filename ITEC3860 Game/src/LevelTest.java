@@ -16,11 +16,11 @@ public class LevelTest {
 	@Before
 	public void setUp() throws Exception 
 	{
-		Room r1 = new Room("Room 1.", new Enemy("Enemy 1.", 3, "Gun"), new Puzzle("Puzzle 1.", "Solution 1"),
+		Room r1 = new Room("Room 1.", new Enemy("Enemy 1."), new Puzzle("Puzzle 1.", "Solution 1"),
 				new Item("Item 1", 100));
-		Room r2 = new Room("Room 2.", new Enemy("Enemy 2.", 5, "Melee"), new Puzzle("Puzzle 2.", "Solution 2"),
+		Room r2 = new Room("Room 2.", new Enemy("Enemy 2."), new Puzzle("Puzzle 2.", "Solution 2"),
 				new Item("Item 2", 100));
-		Room r3 = new Room("Room 3.", new Enemy("Enemy 3.", 7, "Boss"), new Puzzle("Puzzle 3.", "Solution 3"),
+		Room r3 = new Room("Room 3.", new Enemy("Enemy 3."), new Puzzle("Puzzle 3.", "Solution 3"),
 				new Item("Item 3", 100));
 		ArrayList<Room> roomList = new ArrayList<Room>();
 		roomList.add(r1);
@@ -42,11 +42,11 @@ public class LevelTest {
 	@Test
 	public void testLevel() 
 	{
-		Room r1 = new Room("Room 1.", new Enemy("Enemy 1.", 3, "Gun"), new Puzzle("Puzzle 1.", "Solution 1"),
+		Room r1 = new Room("Room 1.", new Enemy("Enemy 1."), new Puzzle("Puzzle 1.", "Solution 1"),
 				new Item("Item 1", 100));
-		Room r2 = new Room("Room 2.", new Enemy("Enemy 2.", 5, "Melee"), new Puzzle("Puzzle 2.", "Solution 2"),
+		Room r2 = new Room("Room 2.", new Enemy("Enemy 2."), new Puzzle("Puzzle 2.", "Solution 2"),
 				new Item("Item 2", 100));
-		Room r3 = new Room("Room 3.", new Enemy("Enemy 3.", 7, "Boss"), new Puzzle("Puzzle 3.", "Solution 3"),
+		Room r3 = new Room("Room 3.", new Enemy("Enemy 3."), new Puzzle("Puzzle 3.", "Solution 3"),
 				new Item("Item 3", 100));
 		ArrayList<Room> roomList = new ArrayList<Room>();
 		roomList.add(r1);
@@ -63,8 +63,6 @@ public class LevelTest {
 		{
 			assertEquals(roomList.get(i).getDescription(), l.getRooms().get(i).getDescription());
 			assertEquals(roomList.get(i).getEnemy().getName(), l.getRooms().get(i).getEnemy().getName());
-			assertEquals(roomList.get(i).getEnemy().getDifficulty(), l.getRooms().get(i).getEnemy().getDifficulty());
-			assertEquals(roomList.get(i).getEnemy().getType(), l.getRooms().get(i).getEnemy().getType());
 			assertEquals(roomList.get(i).getPuzzle().getDescription(), l.getRooms().get(i).getPuzzle().getDescription());
 			assertEquals(roomList.get(i).getPuzzle().getSolution(), l.getRooms().get(i).getPuzzle().getSolution());
 			assertEquals(roomList.get(i).getItem().getName(), l.getRooms().get(i).getItem().getName());

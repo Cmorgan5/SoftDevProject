@@ -71,7 +71,7 @@ public class Store
 	 */
 	public String sellItem(Player aPlayer, Item anItem)
 	{
-		if (aPlayer.getMoney() == 0)
+		if (aPlayer.getMoney() < anItem.getValue())
 		{
 			return "You do not have enough money to buy this item.";
 		}

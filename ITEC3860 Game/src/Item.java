@@ -28,7 +28,7 @@ public class Item {
 	 */
 	public Item(String name, int value) {
 		this.name = name;
-		
+		this.value = value;
 	}
 
 	/** Method getName

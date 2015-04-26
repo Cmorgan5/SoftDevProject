@@ -22,7 +22,7 @@ public class Enemy extends Character
 	 */
 	public Enemy(String aName)
 	{
-		super();
+		super(aName);
 	}
 
 	public String getGreeting()

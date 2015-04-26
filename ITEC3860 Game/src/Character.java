@@ -31,10 +31,10 @@ public abstract class Character {
 	 * 
 	 * @param name - String representing the entity name
 	 */
-	public Character() {
-//this.name = name;
-//		inventory = new ArrayList<Item>();
-//		healthPoints = MAX_HEALTH;
+	public Character(String aName) {
+		this.name = aName;
+		inventory = new ArrayList<Item>();
+		healthPoints = MAX_HEALTH;
 	}
 
 	/** Method getName

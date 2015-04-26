@@ -33,7 +33,7 @@ public class Room
 	 */
 	public Room(String aDescription, Enemy anEnemy, Puzzle aPuzzle, Item anItem)
 	{
-		this.description = aDescription + " " + aPuzzle.getDescription() + " There is a " + anItem.getName() + " on the floor.";
+		this.description = aDescription;
 		this.puzzle = aPuzzle;
 		this.enemy = anEnemy;
 		this.item = anItem;
@@ -55,7 +55,40 @@ public class Room
 	 */
 	public String getDescription()
 	{
-		return description;
+		if (enemy != null && puzzle != null && item != null)
+		{
+			return description + " " + puzzle.getDescription() + " There is a " + item.getName() + " on the floor. " + 
+					enemy.getGreeting();
+		}
+		else if (enemy != null && puzzle != null && item == null)
+		{
+			return description + " " + puzzle.getDescription() + " " +  enemy.getGreeting();
+		}
+		else if (enemy != null && puzzle == null && item == null)
+		{
+			return description + " " + enemy.getGreeting();
+		}
+		else if (enemy != null && puzzle == null && item != null)
+		{
+			return description + " There is a " + item.getName() + " on the floor. " + 
+					enemy.getGreeting();
+		}
+		else if (enemy == null && puzzle != null && item != null)
+		{
+			return description + " " + puzzle.getDescription() + " There is a " + item.getName() + " on the floor.";
+		}
+		else if (enemy == null && puzzle != null && item == null)
+		{
+			return description + " " + puzzle.getDescription();
+		}
+		else if (enemy == null && puzzle == null && item != null)
+		{
+			return description + " " + "There is a " + item.getName() + " on the floor.";
+		}
+		else
+		{
+			return description;
+		}
 	}
 
 	/**
@@ -117,6 +150,11 @@ public class Room
 	public Item getItem()
 	{
 		return item;
+	}
+	
+	public void setItem(Item anItem)
+	{
+		this.item = anItem;
 	}
 
 	/**
