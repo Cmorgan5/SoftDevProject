@@ -14,7 +14,7 @@ public abstract class Character {
 	
 	//Character with different attributes: health, inventory, money, etc
 	protected String name;
-	private int healthPoints;
+	private int healthPoints = 100;
 	private Item currentweapon;
 	//private Armor currentarmor;
 	private ArrayList<Item> inventory;
@@ -23,7 +23,7 @@ public abstract class Character {
 	private Random r = new Random();
 	//Starts off each level with 100 health, and can regenerate health 
 	//with various items
-	private final int MAX_HEALTH = 100;
+	private int MAX_HEALTH;
 	
 
 	/** Method Entity
@@ -53,8 +53,10 @@ public abstract class Character {
 	 * @param none
 	 * @return int - the health points of the entity
 	 */
-	public int getHealth(int healthpoints) {
-		return healthpoints;
+	public int getHealth() {
+		
+		
+		return healthPoints;
 	}
 
 	/** Method addItem
@@ -104,13 +106,13 @@ public abstract class Character {
 	public void takeDamage(int hit) {
 		
 		
-		healthPoints -= hit;
+		healthPoints = healthPoints - hit;
 	}
 	
 	
-	public void attack(Character c) {
+	public void attack(Character c, int hit) {
 		
-		c.healthPoints = 0;
+		c.healthPoints = healthPoints - hit;
 		
 		
 	}
@@ -165,7 +167,7 @@ public abstract class Character {
 	 */
 	public String toString() {
 		
-		return name + " with " + healthPoints + " of health has the following items: \n" + inventory.toString();
+		return name + " with " + healthPoints + " of health.";
 	}
 	
 }
