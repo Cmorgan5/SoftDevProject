@@ -125,6 +125,11 @@ public class Room
 	{
 		return puzzle;
 	}
+	
+	public void setPuzzle(Puzzle newPuzzle)
+	{
+		puzzle = newPuzzle;
+	}
 
 	/**
 	 * checks whether or not the room has a puzzle in it. If false is returned, there is no
