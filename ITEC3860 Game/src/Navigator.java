@@ -10,6 +10,10 @@ public class Navigator {
 		this.level = aLevel;
 	}
 
+	public void setLevel(Level newLevel)
+	{
+		level = newLevel;
+	}
 	public String movePlayer(String direction)
 	{
 		if (direction.equalsIgnoreCase("forward"))
@@ -26,7 +30,14 @@ public class Navigator {
 				}
 				else
 				{
-					return "Level complete. Visiting store." + "\n" + level.getStore().getDescription();
+					if (level.getStore() == null)
+					{
+						return "Congratulations! You won!";
+					}
+					else
+					{
+						return "Level complete. Visiting store." + "\n" + level.getStore().getDescription();
+					}
 				}
 			}
 			else

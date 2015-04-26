@@ -106,4 +106,9 @@ public class Store
 			return anItem.getName() + " was sold to store for $" + anItem.getValue();
 		}
 	}
+	
+	public String toString()
+	{
+		return "Stock: " + stock + ", Store Money: " + budget;
+	}
 }
