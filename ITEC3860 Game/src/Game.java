@@ -3,11 +3,29 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
+
+
+
+
+
+
+
 public class Game {
 
 	private Level level;
 	private Player player;
 	private Navigator navigator;
+	
+//Would these type of entities work? or 
+//do I need to actually make a Weapon and Armor entity 
+//separately
+Item gun = new Item("Gun", 20);
+Item knife = new Item("Knife", 20);
+Item bomb = new Item("Bomb", 20);
+Item vest = new Item("Armor", 35);
+Item shield = new Item("Shield", 50);
+Item helmet = new Item("Helmet", 10);
+
 
 	public Game(Level aLevel, Player aPlayer)
 	{
