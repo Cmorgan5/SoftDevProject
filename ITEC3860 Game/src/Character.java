@@ -14,8 +14,13 @@ public abstract class Character {
 	
 	//Character with different attributes: health, inventory, money, etc
 	protected String name;
-	private int healthPoints = 100;
+	private int healthPoints;
 	private Item currentweapon;
+	private int currentHealth;
+	private Item Weapon;
+	private Item Armor;
+	private int attackPower;
+	private int defensePower;
 	//private Armor currentarmor;
 	private ArrayList<Item> inventory;
 	private String location;
@@ -55,7 +60,7 @@ public abstract class Character {
 	 */
 	public int getHealth() {
 		
-		
+		healthPoints = 100;
 		return healthPoints;
 	}
 
@@ -112,7 +117,16 @@ public abstract class Character {
 	
 	public void attack(Character c, int hit) {
 		
-		c.healthPoints = healthPoints - hit;
+		c.currentHealth = healthPoints - hit;
+		
+		
+	}
+	
+	public int getCurrenthealth() {
+		
+		
+		
+		return currentHealth;
 		
 		
 	}
@@ -127,6 +141,43 @@ public abstract class Character {
 		healthPoints += heal;
 	}
 	
+	
+	public Item getArmor() {
+		return Armor;
+	}
+
+	public void setArmor(Item armor) {
+		Armor = armor;
+	}
+
+	public int getAttackPower() {
+		return attackPower;
+	}
+
+	public void setAttackPower(int attackPower) {
+		this.attackPower = attackPower;
+	}
+
+	public int getDefensePower() {
+		return defensePower;
+	}
+
+	public void setDefensePower(int defensePower) {
+		this.defensePower = defensePower;
+	}
+
+	public ArrayList<Item> getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(ArrayList<Item> inventory) {
+		this.inventory = inventory;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
 	/**Method pickUpItem
 	 * picks up item found
 	 * in rooms or from killing
